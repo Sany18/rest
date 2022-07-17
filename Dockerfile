@@ -1,8 +1,8 @@
-FROM node:12-alpine
+FROM node:16
 
-WORKDIR /app
-COPY . /app
+WORKDIR .
+COPY . .
 RUN npm i
 EXPOSE 3000
 
-CMD [ "npm", "run", "build-start" ]
+CMD [ "npm", "run", "start:prod" ]
