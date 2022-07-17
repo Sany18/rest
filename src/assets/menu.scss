@@ -1,0 +1,76 @@
+@import 'assets/win98theme/styles';
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(assets/fonts/Ubuntu-R.ttf);
+}
+
+:root {
+  font-family: Ms;
+  background-color: #000;
+  cursor: url('assets/svg/cursor.svg'), default;
+}
+
+.link,
+a {
+  color: var(--orange);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  text-decoration: none;
+  border: solid grey 5px;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--red);
+  }
+
+  &:active {
+    background-color: var(--yellow);
+  }
+}
+
+.text {
+  padding: 10px;
+  border: dashed var(--yellow) 1px;
+  max-width: 400px;
+  display: inline-block;
+}
+
+
+.context-menu {
+  color: black;
+  border: 1px solid #555;
+  position: absolute;
+  background-color: grey;
+  padding: 10px;
+  cursor: pointer;
+
+  a:hover, div:hover {
+    background-color: #555;
+  }
+}
+
+.cursors-circle {
+  position: absolute;
+  background-color: #fff4;
+  width: .3cm;
+  height: .3cm;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 1;
+
+  &-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -11px 0 0 -11px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #fff2;
+    z-index: 1;
+  }
+}
